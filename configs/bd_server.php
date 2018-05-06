@@ -1,8 +1,8 @@
 <?php
 $host='localhost';
-$login='gg000251_marcos';
-$clave='JavierT15.';
-$bd='gg000251_capro';
+$login='';
+$clave='';
+$bd='';
 
 $link=mysql_connect($host,$login,$clave);
 mysql_select_db($bd);
