@@ -1,0 +1,4 @@
+@media print{
+#cintillo,#baner, #menu, #indice, #pie, #bannerpie, #logo, #boton {
+	display:none;
+}

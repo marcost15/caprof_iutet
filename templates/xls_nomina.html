@@ -1,0 +1,95 @@
+{include file="inicio2.html"}
+<div id="resultados_reporte">
+<p>
+<div id = "resultados_total">REPORTE DE APORTES Y AHORROS UPTT - MBI / CAPROF - IUTET </br>Fecha: {$fecha}</br>Desde: {$fecha_ini} Hasta: {$fecha_fin}</br>Tipo de Nomina: {$tipo}</div>
+</p>
+{if $datos}
+<div id="resultados">
+<table cellspacing="0" cellpadding = "3" border="1" align="center" width="100%">
+<thead>
+	<tr colspan = "8"><b>ASOCIADOS CAPROF</b></tr>
+	<tr> 
+		<th>&nbsp;</th>
+		<th>CEDULA</th>
+		<th>NOMBRE Y APELLIDO</th>
+		<th>CARGO</th>
+		<th>FECHA ING CAPROF</th>
+		<th>SUELDO</th>
+		<th>AHORRO</th>
+		<th>APORTE</th>
+	</tr>
+</thead>
+<tbody>
+	{section name=p loop=$datos.datos}
+	{if $datos.datos[p].rojo eq 'SI'}
+		<tr align="center" bgcolor = "#eb3b60">
+	{else}
+		<tr class="linea{cycle values='1,2'}">
+	{/if}
+		<td><b>{$smarty.section.p.index_next}</b></td>
+		<td>{$datos.datos[p].cedula}</td>
+		<td>{$datos.datos[p].apell_nomb}</td>
+		<td>{$datos.datos[p].cargo}</td>
+		<td>{$datos.datos[p].fecha_ing}</td>
+		<td>{$datos.datos[p].sueldo}</td>
+		<td>{$datos.datos[p].ahorro}</td>
+		<td>{$datos.datos[p].aporte_patronal}</td>
+	</tr>
+	{/section}
+	
+	<tr>
+		<th colspan = "6">&nbsp;</th>
+		<td align="center"><b>{$total.ahorro}</b></td>
+		<td align="center"><b>{$total.aporte_patronal}</b></td>
+	</tr>
+</tbody>
+</table>
+</p>
+</p>
+</p>
+<table cellspacing="0" cellpadding = "3" border="1" align="center" width="100%">
+<thead>
+	<tr colspan = "8"><b>NO ASOCIADOS CAPROF</b></tr>
+	<tr> 
+		<th>&nbsp;</th>
+		<th>CEDULA</th>
+		<th>NOMBRE Y APELLIDO</th>
+		<th>CARGO</th>
+		<th>SUELDO</th>
+		<th>AHORRO</th>
+		<th>APORTE</th>
+	</tr>
+</thead>
+<tbody>
+	{section name=p loop=$datos.datos1}
+	<tr class="linea{cycle values='1,2'}">
+		<td>{$smarty.section.p.index_next}</td>
+		<td>{$datos.datos1[p].cedula}</td>
+		<td>{$datos.datos1[p].apell_nomb}</td>
+		<td>{$datos.datos1[p].cargo}</td>
+		<td>{$datos.datos1[p].sueldo}</td>
+		<td>{$datos.datos1[p].ahorro}</td>
+		<td>{$datos.datos1[p].aporte_patronal}</td>
+	</tr>{/section}
+	<tr>
+		<th colspan = "5">&nbsp;</th>
+		<td align="center"><b>{$datos.total1.ahorro}</b></td>
+		<td align="center"><b>{$datos.total1.aporte_patronal}</b></td>
+	</tr>
+</tbody>
+</table>
+</div>
+<p>
+<div id = "resultados_total">TOTAL AHORRO: {$datos.total_ahorro} bs</br>
+TOTAL APORTES: {$datos.total_aportes} bs</br>
+TOTAL GENERAL: {$datos.total_general} bs</br>
+TOTAL ARCHIVOS DE NOMINA PROCESADOS: {$datos.total_archivos} </br>
+TOTAL ASOCIADOS CAPROF: {$datos.total.reg} </br> 
+TOTAL NO ASOCIADOS CAPROF: {$datos.total1.reg}</br> 
+CANTIDAD DE REGISTROS: {$datos.total_reg} </br>
+ ******LOS DATOS DE SOCIOS CON CELDAS EN ROJO INDICAN QUE NO SE LE REALIZO EL RESPECTIVO DESCUENTO DE AHORRO Y/O APORTE PATRONAL******** </div>
+</p>
+{else}
+	<h3>NO SE ENCONTRÓ NINGUN DATO QUE CORRESPONDA, VERIFIQUE...</h3>
+{/if}
+{include file="final2.html"}

@@ -1,0 +1,52 @@
+{include file="inicio.html"}
+<div id="resultados_reporte">
+<p>
+<div id = "indice">REPORTE DE ARCHIVOS POR FECHA </br>Desde: {$fecha_ini} Hasta: {$fecha_fin} </div>
+</p>
+{if $datos}
+<div id="resultados">
+<table class="enhancedtable" cellspacing="0" cellpadding = "3" border="1" align="center" width="100%">
+<thead>
+	<tr> 
+		<th>Id</th>
+		<th>Usuario</th>
+		<th>Fecha</th>
+		<th>Archivo</th>
+		<th>Fecha Inicial</th>
+		<th>Fecha Final</th>
+		<th>Tipo</th>
+		<th>Tipo Nomina</th>
+		<th>&nbsp;</th>
+		
+	</tr>
+</thead>
+<tbody>
+	{section name=p loop=$datos}
+	<tr>
+		<td>{$datos[p].id}</td>
+		<td>{$datos[p].usuario}</td>
+		<td>{$datos[p].fecha}</td>
+		{if $datos[p].tipo eq UPT}
+			<td><a href="./upload/nominas_iutet/{$datos[p].nomb_arch}">{$datos[p].nomb_arch}</a></td>
+		{else}
+			{if $datos[p].tipo eq SISTEMA}
+				<td><a href="./upload/archivos_figs/{$datos[p].nomb_arch}">{$datos[p].nomb_arch}</a></td>
+			{else}
+				<td><a href="./upload/nominas_caprof/{$datos[p].nomb_arch}">{$datos[p].nomb_arch}</a></td>
+			{/if}
+		{/if}
+		<td>{$datos[p].fecha_ini}</td>
+		<td>{$datos[p].fecha_fin}</td>
+		<td>{$datos[p].tipo}</td>
+		<td>{$datos[p].tipo_id}</td>
+		<td><div id = "boton"><a onclick="return confirm('¿Esta seguro?')" href="?accion=eliminar&amp;id={$datos[p].id}&fecha_ini={$fecha_ini}&fecha_fin={$fecha_fin}"><img onmouseover='overlib("<strong>Eliminar</strong>",WIDTH, 70)' src="./imagenes/eliminar.png" onmouseout='return nd();'/></a></div></td>
+	</tr>{/section}
+</tbody>
+</table>
+</div>
+{else}
+	<h3>NO SE ENCONTRÓ NINGUN DATO QUE CORRESPONDA, VERIFIQUE...</h3>
+{/if}
+{if $datos}
+</div>{/if}
+{include file="final.html"}
