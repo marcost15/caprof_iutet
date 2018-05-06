@@ -1,0 +1,18 @@
+#menu {height:36px; background:#3B30D2; color:#fff; text-shadow:1px 1px #888; z-index:1000}
+.mimenu a {float:left; color:#FFFFFF; text-decoration:none; width:130; height:28px; padding-top:8px}
+.mimenu span {float:left; color:#FFFFFF; text-decoration:none; width:130px; height:28px; padding-top:8px}
+.mimenu a:hover {color:#fff; background:#3B30D2; text-decoration:none}
+.mimenu {list-style:none; text-align:center; width:1050px; margin:0; padding:0; outline:0}
+.mimenu li {position:relative; float:left; width: 130px; z-index:1000}
+.mimenu ul {text-decoration:none; display:none; position:absolute; font:normal 13px Arial,Verdana; top:36px; left:0; background:#3B30D2; display:none; list-style:none;
+margin:0; padding:0; outline:0}
+.mimenu ul li {float:none; border-top:1px solid #FFFFFF; width:130px}
+.mimenu ul li a, li.menuhover li a, li.menuhover li.menuhover li a {float:none; display:block; background:none; height:22px; padding-top:5px; text-decoration:none}
+.mimenu ul li a:hover, li.menuhover li a:hover, li.menuhover li.menuhover li a:hover {background:#30C2D2; color:#fff; text-decoration:none}
+.mimenu ul li span, li.menuhover li span, li.menuhover li.menuhover li span {float:none; display:block; background:none; height:22px; padding-top:5px; width:130px}
+.mimenu ul ul {left:130px; top:0}
+.mimenu li.submenu {font-weight:bold}
+.mimenu li.noborder {border-top:none}
+li.menuhover a, li.menuhover li.menuhover a {color:#fff; background:#30C2D2; text-decoration:none}
+li.menuhover span, li.menuhover li.menuhover span {color:#fff; background:#30C2D2}
+*/

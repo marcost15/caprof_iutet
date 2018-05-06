@@ -1,0 +1,213 @@
+#menu{
+	border: solid 1px blue;
+    -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	text-align:center;
+}
+
+#bannereporte {
+	display:none;
+	text-align:center;
+}
+#banner{
+	text-align:center;
+}
+#fondo{
+    width:1053px;
+	background-color: #ffffff;
+	margin:auto;
+	border:3px solid blue;
+    -moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+#boton{
+	margin:auto;
+	word-spacing:50px;
+}
+#fondoreporte{
+	position: relative;
+	background-color: transparent;
+	margin:auto;
+	text-align::center;
+}
+#contenido{
+	background-color: #ffffff;
+	margin:auto;
+	text-align:center;
+}
+
+#contenido_sinmenu{
+    width:100%;
+	background-color:#ffffff;
+	margin:auto;
+	text-align:center;
+}
+#contenido_reporte{
+	margin:auto;
+	text-align:center;
+}
+#menudiv{
+text-align: center;
+}
+#pie{ 
+	text-align:center;
+	padding:15px;
+	clear: both;
+	font-size:small;
+}
+/* Tablas
+***********************************************************/
+#resultados{
+	background-color: #467fb9;
+}
+#resultados table .linea1{
+	background-color: #FFFFFF;
+	text-align: center;
+}
+#resultados table .linea2{
+	background-color: #3d9cb4;
+	text-align: center;
+}
+#resultadosxgrilla{
+	overflow: auto;
+	width:870px;
+	height: 532px;
+	background-color: #467fb9;
+	text-align: center;
+}
+.enhancedtable{
+	background:#467fb9;
+	border:2px solid #3e8bd8;
+	text-align: center;
+}
+.enhancedtable td,.enhancedtable th {
+	text-align: center;
+}
+.enhancedtablecolouredrow{
+	background:#ffffff;
+}
+.enhancedtablerowhover{
+	background:#3d9cb4;
+}
+.enhancedtableactive{
+	background:#3d9cb4;
+}
+/* Tablas
+***********************************************************/
+#indice{
+	text-align: left;
+	font-weight:bolder
+}
+a:link{color:#000000;text-decoration:underline}
+a:hover{color:#a71007;text-decoration:underline;}
+a:active{color:#a71007;font-weight:bolder} 
+a:visited{color:#000000;font-style:italic}
+
+#resultados_total{
+	text-align: left;
+	font-weight:bolder
+}
+
+#fondo table.ficha{
+	text-align: left;
+	border-collapse: collapse;
+	border: solid 2px #000000;
+}
+#fondo table.ficha th{
+	background-color:#0099CC;
+	font-weight:bolder
+}
+#titulo{
+	text-align:center;
+	background-color:#FFFFFF;
+	color:#467fb9;
+	font-weight:bold;
+	font-size:medium;
+	padding:1px;
+}
+h1,h2,h3,h4,h5{
+	text-align: center;
+	color:#FFFFFF;
+	background-color: #467fb9;
+}
+
+.abc{
+	text-align : center;
+	font-weight:bolder;
+	text-decoration: none;	
+}
+#mensaje{
+	width : 100%;
+	background-color: transparent;
+	text-align : center;
+	font-weight:bolder;
+	font-size:medium;
+	color:red;
+}
+#foto15{
+	width : 20%;
+	background-color: #FFFFFF;
+	float : right;
+	text-align : center;
+}
+#documentos{
+	width : 100%;
+	font-size:medium;
+	font-family:arial;
+	line-height : 35px;
+	text-align:justify;
+}
+
+#busqueda2{
+	width : 50%;
+	float : left;
+	background-color: #FFFFFF;
+}
+#busqueda3{
+	background-color: #FFFFFF;
+	float:right;
+	width : 50%;
+}
+
+#fondo table.firma{
+	text-align : center;
+}
+
+ 
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+
+/****************SORTABLE***************************/
+a img {
+	border: 0;
+}
+/****************SORTABLE***************************/

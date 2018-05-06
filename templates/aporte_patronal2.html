@@ -1,0 +1,23 @@
+{include file="inicio.html"}
+{if $datos}
+<p>
+<div id = "indice">ARCHIVO FIGS APORTE PATRONAL</br>Desde: {$fecha_ini} Hasta: {$fecha_fin} Tipo: {$tipo}</div>
+</p>
+<table cellspacing="0" cellpadding = "3" border="1" align="center" width="100%">
+<tbody>
+	{section name=p loop=$datos}
+		<td>{$datos[p].cedula}</td>
+		<td>{$fecha_ini}</td>
+		<td>{$fecha_fin}</td>
+		<td>0</td>
+		<td>{$datos[p].aporte_patronal}</td>
+	</tr>
+	{/section}
+</tbody>
+</table>
+</p>
+<h3><a href="./upload/archivos_figs/{$nombre_archivo}">DESCARGAR ARCHIVOS FIGS - CAPROFIUTET</a></h3>
+{else}
+	<h3>NO SE ENCONTRÓ NINGUN DATO QUE CORRESPONDA, VERIFIQUE...</h3>
+{/if}
+{include file="final.html"}

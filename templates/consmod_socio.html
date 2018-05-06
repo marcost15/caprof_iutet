@@ -1,0 +1,37 @@
+﻿{include file="inicio.html" title="Consultar Socios"}
+{$f1}
+{if $datos}
+<h4>Socios Solicitados</h4>
+<div id="resultados">
+<table  class="enhancedtable" border="0" cellspacing="3" cellpadding="3" width="100%">
+<thead>
+	<tr> 
+		<th>Cedula</th>
+		<th>Apellidos y Nombres</th>
+		<th>Cargo</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+	</tr>
+</thead>
+<tbody>
+	{section name=p loop=$datos}
+	<tr>
+		<td>{$datos[p].id}</td>
+		<td>{$datos[p].apellido}, {$datos[p].nombre}</td>
+		<td>{$datos[p].cargo}</td>
+		<td><a href="ficha_personal.php?id={$datos[p].id}"><img onmouseover='overlib("<strong>Ver Ficha</strong>",WIDTH, 70)' src="./imagenes/ver.ico" onmouseout='return nd();'/></a></td>
+		<td><a href="modificar_personal.php?id={$datos[p].id}"><img onmouseover='overlib("<strong>Modificar</strong>",WIDTH, 70)' src="./imagenes/boton1.png" onmouseout='return nd();'/></a></td>
+	</tr>{/section}
+</tbody>
+</table>
+</div>
+{else}
+	{if $error1 eq 2} 
+		<h3>NO SE ENCONTRÓ SOCIO CON ESOS PARAMETROS, VERIFIQUE...</h3>
+	{else}
+		{if $error1 eq 1} 
+			<h3>NO SE ENCONTRÓ SOCIO CUYO APELLIDO COMIENZA POR ESA LETRA, VERIFIQUE...</h3>
+		{/if}
+	{/if}
+{/if}
+{include file="final.html"}
