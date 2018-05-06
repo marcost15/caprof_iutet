@@ -1,0 +1,20 @@
+{include file="cabecera.html"}
+
+<table width="90%">
+<tr>
+	{$f1}
+</tr>
+<tr>
+ 	<div class="mensaje">{$smarty.session.mensaje}</div>
+</tr>
+<tr>
+ 	<td>
+		<ul>
+			{section name=i loop=$tipo_documentos}<li><a href="?id={$tipo_documentos[i].id}">{$tipo_documentos[i].nombre}</a></li>{/section}
+		</ul>
+	</td>
+</tr>
+
+</table>
+
+{include file="pie.html"}

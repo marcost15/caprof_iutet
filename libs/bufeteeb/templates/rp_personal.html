@@ -1,0 +1,57 @@
+{include file="cabecera.html"}
+
+<h4>Listado del personal</h4>
+<p>Selecione una letra para mostrar el personal cuyo apellido comienza por la letra indicada</p>
+<div class="abc">
+	<a href="?letra=a&amp;accion=letra">A</a> 
+	<a href="?letra=b&amp;accion=letra">B</a> 
+	<a href="?letra=c&amp;accion=letra">C</a> 
+	<a href="?letra=d&amp;accion=letra">D</a> 
+	<a href="?letra=e&amp;accion=letra">E</a> 
+	<a href="?letra=f&amp;accion=letra">F</a> 
+	<a href="?letra=g&amp;accion=letra">G</a> 
+	<a href="?letra=h&amp;accion=letra">H</a> 
+	<a href="?letra=i&amp;accion=letra">I</a> 
+	<a href="?letra=j&amp;accion=letra">J</a> 
+	<a href="?letra=k&amp;accion=letra">K</a> 
+	<a href="?letra=l&amp;accion=letra">L</a> 
+	<a href="?letra=m&amp;accion=letra">M</a> 
+	<a href="?letra=n&amp;accion=letra">N</a> 
+	<a href="?letra=o&amp;accion=letra">O</a> 
+	<a href="?letra=p&amp;accion=letra">P</a> 
+	<a href="?letra=q&amp;accion=letra">Q</a> 
+	<a href="?letra=r&amp;accion=letra">R</a> 
+	<a href="?letra=s&amp;accion=letra">S</a> 
+	<a href="?letra=t&amp;accion=letra">T</a> 
+	<a href="?letra=u&amp;accion=letra">U</a> 
+	<a href="?letra=v&amp;accion=letra">V</a> 
+	<a href="?letra=w&amp;accion=letra">W</a> 
+	<a href="?letra=x&amp;accion=letra">X</a> 
+	<a href="?letra=y&amp;accion=letra">Y</a> 
+	<a href="?letra=z&amp;accion=letra">Z</a> 
+</div>
+
+<p>O si lo desea, escriba en el cuadro texto para hacer una busqueda completa</p>
+
+{$f1}
+
+{if $datos}
+<h3>Personal Solicitado</h3>
+<div id="resultados">
+<table border="0" cellspacing="3" cellpadding="3" width="100%">
+	<tr>
+		<th>Cedula</th>
+		<th>Nombre</th>
+		<th>&nbsp;</th>
+	</tr>
+
+	{section name=p loop=$datos}
+	<tr class="linea{cycle values='1,2'}">
+		<td>{$datos[p].id}</td>
+		<td>{$datos[p].apellido}, {$datos[p].nombre}</td>
+		<td><a href="rp_constancia_trabajo.php?id={$datos[p].id}">[Seleccione]</a></td>
+	</tr>{/section}
+</table>
+</div>
+{/if}
+{include file="pie.html"}

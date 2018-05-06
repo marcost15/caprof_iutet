@@ -1,0 +1,20 @@
+{include file="cabecera.html"}
+<h4>Honorarios</h4>
+<div id="resultados">
+<table border="0" cellspacing="3" cellpadding="3" width="100%">
+	<tr >
+		<th>Fecha</th>
+		<th>% al Colegio de Abogados</th>
+		<th>Honorario</th>
+		<th>Tipo</th>
+		</tr>
+	{section name=p loop=$datos}
+	<tr class="linea{cycle values='1,2'}">
+		<td>{$datos[p].fecha}</td>
+		<td>{$datos[p].xcolabog}</td>
+		<td>{$datos[p].precioserv}</td>
+		<td>{$datos[p].tipo_honorario}</td>
+	</tr>{/section}
+</table>
+</div>
+{include file="pie.html"}

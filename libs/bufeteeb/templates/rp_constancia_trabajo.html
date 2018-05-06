@@ -1,0 +1,30 @@
+{include file="cabecera.html"}
+
+<div id="imprimir">
+	<h3>Constancia de Trabajo</h3>
+	<p class="texto" > 
+		Por medio de la presente se hace constar que el ciudadano: 
+		{$ficha.apellido},{$ficha.nombre}
+
+		portador de la cédula de identidad: 
+		{$ficha.id}
+ 
+		trabaja en este bufete desde la fecha: 
+		{$ficha.fechaingreso} 
+ 
+		en el cargo de: 
+		{$ficha.acceso}
+, 
+		presentando una conducta intachable y desempeñando a cabalidad sus funciones.
+	</p>
+	<p> 
+		Constancia que se expide a petición en fecha {$fecha}
+.
+	</p>
+	<p class="firma">
+		<br />
+		<hr width="300px" />
+		Firma y sello
+	</p>
+</div>
+{include file="pie.html"}

@@ -1,0 +1,77 @@
+#asuntos{
+	background-color: #FFCC66;
+}
+#asuntos table .linea1{
+	background-color: #FFFFCC;
+	text-align: center;
+}
+#asuntos table .linea2{
+	background-color: #FFFF99;
+	text-align: center;
+}
+
+#resultados{
+	background-color: #FFCC66;
+}
+
+#resultados table .linea1{
+	background-color: #FFFFCC;
+	text-align: center;
+}
+#resultados table .linea2{
+	background-color: #FFFF99;
+	text-align: center;
+}
+
+#indice{
+	background-color: #FFFFFF;
+	text-align: center;
+}
+#menudiv{
+}
+
+#contenido{
+border-style:solid;
+border-width:thin;
+border-color:#a71007;
+}
+#fondo{
+    width:728px;
+	background-color: #FFFFFF;
+	margin:auto;
+}
+a:link{color:#000000;text-decoration:underline}
+a:hover{color:#a71007;text-decoration:underline}
+a:active{color:#FFCC00} 
+a:visited{color:grey;font-style:italic}
+
+#fondo table.retiro{
+	text-align: left;
+}
+#titulo{
+	text-align:center;
+	background-color:#a71007;
+	color:White;
+	font-weight:bold;
+	font-size:small;
+	padding:2px;
+}
+
+h1,h2,h3,h4,h5{
+	text-align: center;
+	color: white;
+	background-color: #a71007;
+}
+
+.abc{
+	text-align : center;
+	font-weight:bolder;
+	text-decoration: none;	
+}
+
+#pie{
+	text-align:center;
+	color:#000000;
+	font-weight:lighter;
+	font-size:x-small;
+	padding:10px;

@@ -1,0 +1,11 @@
+#banner1, #menudiv, #pie {
+	display:none;
+}
+
+#imprimir{ 
+	width:650px; 
+}
+
+#imprimir .texto{
+	display:inline;
+}

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_abogados" value="name:id;datatype:string,name:ipsa;datatype:string,name:apellido;datatype:string,name:nombre;datatype:string,name:domicilio;datatype:string,name:telfij;datatype:string,name:telfmo;datatype:string,name:correo;datatype:string,name:usuario;datatype:string,name:clave;datatype:string,name:acceso;datatype:string,name:fechaingreso;datatype:date,name:condicion;datatype:string" />
+</info>

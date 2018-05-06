@@ -1,3 +1,3 @@
 <?php
-include '../libreriasphp/krumo/class.krumo.php';
+include './libs/libreriasphp/krumo/class.krumo.php';
 
