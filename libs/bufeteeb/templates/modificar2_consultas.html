@@ -1,0 +1,23 @@
+{include file="cabecera.html"}
+<h4>Consultas</h4>
+<div id="resultados">
+<div id="indice">
+	Total de Consultas: {$n}</br>
+		{section name=z loop=$indice}
+		<a href="?li={$indice[z].li}">[{$indice[z].li}-{$indice[z].ls}]</a>{/section}
+	</div>
+<table border="0" cellspacing="3" cellpadding="3" width="100%">
+	<tr >
+		<th>Fecha</th>
+		<th>Asunto</th>
+		<th>&nbsp;</th>
+	</tr>
+	{section name=p loop=$datos}
+	<tr class="linea{cycle values='1,2'}">
+		<td>{$datos[p].fecha}</td>
+		<td>{$datos[p].asunto}</td>
+		<td><a href="modificar_consulta.php?id={$datos[p].id}">[Modificar]</a></td>
+	</tr>{/section}
+</table>
+</div>
+{include file="pie.html"}

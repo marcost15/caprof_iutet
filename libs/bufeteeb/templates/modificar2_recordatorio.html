@@ -1,0 +1,23 @@
+{include file="cabecera.html"}
+{$f1}
+
+<h3>Asuntos pendientes</h3>
+<div id="asuntos">
+<table border="0" cellspacing="3" cellpadding="5" width="100%">
+	<tr>
+		<th>Fecha</th>
+		<th>Hora</th>
+		<th>Asunto</th>
+		<th>&nbsp;</th>
+	</tr>
+	{section name=i loop=$lista}
+	<tr class="linea{cycle values='1,2'}">
+			<td>{$lista[i].fecha}</td>
+			<td>{$lista[i].hora}</td>
+		<td>{$lista[i].asunto}</td>
+		<td><a href="modificar_recordatorio.php?id={$lista[i].id}">[modificar]</a></td>
+	</tr>
+	{/section}
+</table>
+</div>
+{include file="pie.html"}
