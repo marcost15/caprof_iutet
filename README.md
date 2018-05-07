@@ -26,7 +26,7 @@ En la carpeta manual se encuentra el manual elaborado por la Prof Doris Maribel
 
 >Marcos Torrealba - IP SISTEMAS C.A - Programacion Inicial
 
-Doris Briceño - IUTET - Documentación 
+>Doris Briceño - IUTET - Documentación 
 
 ##  Licencia 
 >Este proyecto está bajo la Licencia GNUv3 - mira el archivo LICENSE.md para detalles
