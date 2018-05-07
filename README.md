@@ -24,7 +24,6 @@ En la carpeta manual se encuentra el manual elaborado por la Prof Doris Maribel
 
 
 ## Código de Ejemplo
-'
 <?php
 
 // FORMULARIO BASICO 
@@ -102,14 +101,14 @@ function procesar($d)
 }
 $smarty->assign('f1',$f1->flush(true));
 $smarty->disp();
-unset($_SESSION['mensaje']);'
+unset($_SESSION['mensaje']);
 
 
 ## Autores
-
+>
 Marcos Torrealba - IP SISTEMAS C.A - Programacion Inicial
 Doris Briceño - IUTET - Documentación 
 
 ##  Licencia 
-
+>
 Este proyecto está bajo la Licencia GNUv3 - mira el archivo LICENSE.md para detalles
